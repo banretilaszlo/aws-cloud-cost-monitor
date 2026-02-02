@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AWS Cost Dashboard</title>
+</head>
+<body>
+  <h1>AWS Cost Dashboard</h1>
+  <p id="version"></p>
+  <p id="period">Loading...</p>
+  <h2 id="total"></h2>
+
+  <script>
+    const version = "v1.0.2";
+
+    async function loadCost() {
+      const res = await fetch("cost.json?v=" + version);
+      const data = await res.json();
+
+      document.getElementById("period").innerText =
+        "Period: " + data.period;
+
+      document.getElementById("total").innerText =
+        "Total cost: $" + data.total;
+    }
+
+    document.getElementById("version").innerText =
+      "Deployed version: " + version;
+
+    loadCost();
+  </script>
+</body>
+</html>
+
