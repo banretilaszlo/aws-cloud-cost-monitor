@@ -47,7 +47,7 @@ CloudWatch → SNS → Lambda → Cost Explorer → S3 → CloudFront → Browse
 - ~50 MB static content
 
 🆓 Free Tier
-----------------------------------
+
 | Service    | Est. Monthly Cost |
 |------------|-------------------|
 | Lambda     | $0 (free tier)    |
@@ -55,11 +55,11 @@ CloudWatch → SNS → Lambda → Cost Explorer → S3 → CloudFront → Browse
 | CloudWatch | $0–$1             |
 | S3         | <$0.10            |
 | CloudFront | <$0.50            |
-----------------------------------
+
 **Total:** ~$0–$2 / month
 
 🏢 Real-World (no free tier, small business scale)
---------------------------------------------------------------
+
 | Service                                | Est. Monthly Cost |
 |----------------------------------------|-------------------|
 | Lambda (4 runs/month)                  | ~$0,01            |
@@ -67,17 +67,17 @@ CloudWatch → SNS → Lambda → Cost Explorer → S3 → CloudFront → Browse
 | CloudWatch metrics + alarm             | ~$2–$4            |
 | S3 (1GB storage)                       | ~$0.02            |
 | CloudFront (1,000 req + 1 GB transfer) | ~$0.10-$1         |
---------------------------------------------------------------
+
 👉 Estimated total: $5–$10 / month
 
 
 🏭 Scaling scenario (startup / SaaS)
------------------------------------------
+
 | Scenario                  | Est. Cost |
 | ------------------------- | --------- |
 | 10k dashboard views/month | ~$15–$25  |
 | 100k views/month          | ~$50–$80  |
------------------------------------------
+
 
 This project is designed to be cost-efficient.
 At small business scale, the estimated monthly cost is $5–$10, while still providing enterprise-style monitoring and alerting.
@@ -100,6 +100,7 @@ At small business scale, the estimated monthly cost is $5–$10, while still pro
 ```powershell
 aws configure
 deploy.bat
+```
 
 This will:
 
